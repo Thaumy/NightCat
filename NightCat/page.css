@@ -1,4 +1,14 @@
 .NightCat {
-    background: rgb(45, 45, 45) !important;
+    background: hsl(0, 0%, 18%) !important;
+    color: rgb(240, 240, 240) !important;
+}
+
+.NightCat_child {
+    background: hsl(220, 38%, 18%) !important;
+    color: rgb(240, 240, 240) !important;
+}
+
+.NightCat_li {
+    background: hsl(267, 38%, 18%) !important;
     color: rgb(240, 240, 240) !important;
 }
