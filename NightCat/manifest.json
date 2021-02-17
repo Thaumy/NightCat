@@ -14,8 +14,9 @@
 		"default_popup": "app.html"
 	},
 	"content_scripts": [{
-		"matches": ["https://www.baidu.com/*"],
-		"js": ["content-script.js"]
+		"matches": ["<all_urls>"],
+		"js": ["page.js"],
+		"css": ["page.css"]
 	}],
 	"permissions": [
 		"contextMenus",

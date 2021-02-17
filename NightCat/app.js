@@ -12,7 +12,7 @@
     },
     methods: {
         ss: function () {
-            executeScriptToCurrentTab('document.body.style.backgroundColor="";')
+            executeScriptToCurrentTab("document.getElementById('div').setAttribute('style', 'abc'); ")
         }
     }
 })
