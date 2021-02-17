@@ -1,4 +1,4 @@
 .NightCat {
-    background: rgb(45, 45, 45);
-    color: rgb(238, 238, 238);
+    background: rgb(45, 45, 45) !important;
+    color: rgb(240, 240, 240) !important;
 }
