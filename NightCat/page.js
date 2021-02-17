@@ -1,15 +1,15 @@
-﻿var divs = document.getElementsByTagName("*");
+﻿function set_dark() {
+	var divs = document.getElementsByTagName("*")
 
-function set(divs) {
 	for (var i = 0; i < divs.length; i++) {
-		if (divs[i].childElementCount != 0) {
-			divs[i].classList.add('NightCat')
-			set(divs[i])
-		} else {
-			divs[i].classList.add('NightCat')
-		}
-
+		divs[i].classList.add('NightCat')
 	}
 }
 
-set(divs)
+function set_white() {
+	var divs = document.getElementsByTagName("*")
+
+	for (var i = 0; i < divs.length; i++) {
+		divs[i].classList.remove('NightCat')
+	}
+}

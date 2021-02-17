@@ -7,12 +7,18 @@
     }),
     data() {
         return {
-
+            isDark: false
         }
     },
     methods: {
-        ss: function () {
-            executeScriptToCurrentTab("document.getElementById('div').setAttribute('style', 'abc'); ")
+        dark: function () {
+            if (this.isDark) {
+                executeScriptToCurrentTab("set_white();")
+                this.isDark = false
+            } else {
+                executeScriptToCurrentTab("set_dark();")
+                this.isDark = true
+            }
         }
     }
 })

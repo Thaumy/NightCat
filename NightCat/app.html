@@ -15,7 +15,7 @@
 <body>
 	<div id="app">
 		<v-app>
-			<v-switch v-model="$vuetify.theme.dark" @click="ss()"></v-switch>
+			<v-switch v-model="!$vuetify.theme.dark" @click="dark()"></v-switch>
 		</v-app>
 	</div>
 
