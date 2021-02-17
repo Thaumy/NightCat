@@ -15,7 +15,7 @@
 <body>
 	<div id="app">
 		<v-app>
-			<v-btn width="100%" height="32px" class="mb-2" v-on:click="RSA_Transl()">RSA</v-btn>
+			<v-switch v-model="$vuetify.theme.dark" @click="ss()"></v-switch>
 		</v-app>
 	</div>
 
@@ -23,6 +23,8 @@
 	<script src="./dependences/vuetify.js"></script>
 	<script src="./dependences/axios.min.js"></script>
 	<script src="./dependences/qs.min.js"></script>
+
+	<script src="app.js"></script>
 
 	<!--莫名其妙多个iframe-->
 	<style>

@@ -17,6 +17,16 @@
 		"matches": ["https://www.baidu.com/*"],
 		"js": ["content-script.js"]
 	}],
+	"permissions": [
+		"contextMenus",
+		"tabs",
+		"notifications",
+		"webRequest",
+		"webRequestBlocking",
+		"storage",
+		"http://*/*",
+		"https://*/*"
+	],
 	"web_accessible_resources": [
 		"inject.js"
 	]
