@@ -1,28 +1,23 @@
 {
 	"manifest_version": 2,
-	"name": "Chrome插件demo",
+	"name": "NightCat",
 	"version": "1.0",
-	"description": "最简单的Chrome插件demo，需要快速做一个简单的插件时可以基于这个仓库开发",
-	"author": "sxei",
-	"icons":
-	{
+	"description": "将你的浏览器切换到夜间模式。",
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"author": "Thaumy",
+	"icons": {
 		"48": "icon.png",
 		"128": "icon.png"
 	},
-	"browser_action": 
-	{
+	"browser_action": {
 		"default_icon": "icon.png",
-		"default_popup": "popup.html"
+		"default_popup": "app.html"
 	},
-	"content_scripts": 
-	[
-		{
-			"matches": ["https://www.baidu.com/*"],
-			"js": ["content-script.js"]
-		}
-	],
-	"web_accessible_resources": 
-	[
+	"content_scripts": [{
+		"matches": ["https://www.baidu.com/*"],
+		"js": ["content-script.js"]
+	}],
+	"web_accessible_resources": [
 		"inject.js"
 	]
 }
