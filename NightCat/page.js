@@ -1,5 +1,5 @@
 ﻿function set_dark() {
-	var divs = document.getElementsByTagName(new RegExp('^[script]'))
+	var divs = document.getElementsByTagName('*')
 
 	for (var i = 0; i < divs.length; i++) {
 		var el = divs[i];
@@ -23,6 +23,6 @@ function set_white() {
 	var reg = new RegExp('NightCat_[A-Za-z0-9]*');
 	for (var i = 0; i < divs.length; i++) {
 		var el = divs[i];
-		el.className = el.className.replace(reg, ' ');
+		el.classList.remove(reg)
 	}
 }

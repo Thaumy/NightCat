@@ -20,6 +20,9 @@
                 this.isDark = true
             }
         }
+    },
+    mounted() {
+        //this.dark()
     }
 })
 
