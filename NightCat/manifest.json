@@ -16,7 +16,7 @@
 	"content_scripts": [{
 		"matches": ["<all_urls>"],
 		"js": ["page.js"],
-		"css": ["page.css"]
+		"css": ["page.css","default.css"]
 	}],
 	"permissions": [
 		"contextMenus",

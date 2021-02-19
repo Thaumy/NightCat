@@ -1,27 +1,15 @@
 ﻿function set_dark() {
-	var divs = document.getElementsByTagName('*')
+	for (var i = 0; i < document.styleSheets.length; i++) {
+		var StyleSheet = document.styleSheets[i]
 
-	for (var i = 0; i < divs.length; i++) {
-		var el = divs[i];
-		if (el.childElementCount > 1) {
-			if (isType(el.parentNode, "body")) {
-				el.classList.add('NightCat_normal')
-			}
-
-
-			if (el.tagName == "LI") {
-				el.classList.add('NightCat_li')
-			} else {
-				el.classList.add('NightCat_normal')
-			}
-		} else {
-			el.classList.add('NightCat_child')
+		for (var i = 0; i < StyleSheet.cssRules.length; i++) {
+			var CSSStyleRule = StyleSheet.cssRules[i]
+			//var color = CSSStyleRule.style.getPropertyValue("color");
+			console.log(RGBisLow("rgb(112, 2, 3)", 30))
+			//CSSStyleRule.style.setProperty("background-color", "yellow")
 		}
-	}
 
-	var pre = document.getElementsByTagName('pre')
-	var code = document.getElementsByTagName('code')
-	
+	}
 }
 
 function set_white() {
@@ -36,4 +24,22 @@ function set_white() {
 
 function isType(el, type) {
 	return el.tagName.toLowerCase() == type.toLowerCase()
+}
+
+function RGBisLow(src, dest) {
+	var reg_r = new RegExp("\([0-9]*,")
+	var reg_g = new RegExp(" [0-9]*,")
+	var reg_b = new RegExp(" [0-9]*\)")
+	r.exec(src)[0].trim()
+
+	var r = reg_r.exec(src)[0].trim()
+	r = parseInt(r.substring(1, g.length - 2), 10)
+
+	var g = reg_g.exec(src)[0].trim()
+	g = parseInt(g.substring(1, g.length - 2), 10)
+
+	var b = reg_b.exec(src)[0].trim()
+	b = parseInt(b.substring(1, b.length - 2), 10)
+
+	return (r + g + b) < dest
 }
